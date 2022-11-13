@@ -196,6 +196,12 @@ form:
 	leaq	.LC2(%rip), %rdi
 	call	fopen@PLT	        # открываем файл для записи
 	movq	%rax, -8(%rbp)
+	movq	%r14, %rdx
+	movq	%r15, %rax
+	movq	%rdx, %rsi
+	movq	%rax, %rdi
+	call	strstr@PLT
+	movq	%rax, %r13
 	jmp	.L19
 .L20:
 	movq	%r13, %rax
