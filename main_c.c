@@ -78,7 +78,7 @@ void form(char *str, char *instr, int file) {
 char *generate(char *str, char *instr) {
     srand(time(NULL));
     int instrn = 1 + rand() % 5;
-    int strn = 10000 + rand() % 10000;
+    int strn = 1 + rand() % 1000;
     
     instr = realloc(instr, instrn);
     str = realloc(str, strn);
